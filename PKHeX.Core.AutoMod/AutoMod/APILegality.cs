@@ -99,7 +99,7 @@ namespace PKHeX.Core.AutoMod
             }
 
             // Don't process if Hidden Ability is requested and the PKM is from Gen 3 or Gen 4
-            gen = enc is IGeneration g ? g.Generation : tr.Generation;
+            gen = enc is IEncounterable g ? g.Generation : tr.Generation;
             if (isHidden && (uint) (gen - 3) < 2) // Gen 3 and Gen 4
                 return false;
 
